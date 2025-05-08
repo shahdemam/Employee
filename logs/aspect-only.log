@@ -1,0 +1,11 @@
+2025-05-07 09:25:09 [http-nio-8081-exec-1] INFO  c.e.E.Aspects.LoggingAspect - Calling method: List com.example.EmployeeService.Services.TaskService.GetTasksByEmployeeId(int) with arguments: [1]
+2025-05-07 09:25:09 [http-nio-8081-exec-1] INFO  c.e.E.Aspects.LoggingAspect - Method List com.example.EmployeeService.Services.TaskService.GetTasksByEmployeeId(int) returned: [TaskEmployeeDto(title=Task 1, description=Complete the first task, status=completed
+, deadline=2025-05-11 12:00:00.0), TaskEmployeeDto(title=Task 2, description=Complete the second task, status=in progress, deadline=2025-05-15 12:00:00.0)]
+2025-05-07 09:29:44 [http-nio-8081-exec-5] INFO  c.e.E.Aspects.LoggingAspect - Calling method: void com.example.EmployeeService.Services.TaskService.UpdateTaskStatus(int,String) with arguments: [1, in progress
+]
+2025-05-07 09:29:44 [http-nio-8081-exec-5] INFO  c.e.E.Aspects.LoggingAspect - Method void com.example.EmployeeService.Services.TaskService.UpdateTaskStatus(int,String) returned: null
+2025-05-07 09:37:49 [http-nio-8081-exec-6] INFO  c.e.E.Aspects.LoggingAspect - Calling method: void com.example.EmployeeService.Services.TaskService.triggerException() with arguments: []
+2025-05-07 09:37:49 [http-nio-8081-exec-6] ERROR c.e.E.A.ExceptionHandlingAspect - Exception in method: void com.example.EmployeeService.Services.TaskService.triggerException() with message: Test exception for AOP logging
+2025-05-07 10:32:29 [http-nio-8081-exec-2] INFO  c.e.E.Aspects.LoggingAspect - Calling method: void com.example.EmployeeService.Services.TaskService.UpdateTaskStatus(int,String) with arguments: [9999, DONE
+]
+2025-05-07 10:32:29 [http-nio-8081-exec-2] ERROR c.e.E.A.ExceptionHandlingAspect - Exception in method: void com.example.EmployeeService.Services.TaskService.UpdateTaskStatus(int,String) with message: Task not found
