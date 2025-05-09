@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <!-- Appender للكونسول - يظهر كل شيء -->
+
     <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
 
-    <!-- Appender للفايل - يسجل بس الـ logs من الباكيج بتاعتك -->
+
     <appender name="FileOnlyAspect" class="ch.qos.logback.core.FileAppender">
         <file>logs/aspect-only.log</file>
         <append>true</append>
@@ -17,12 +17,12 @@
         </encoder>
     </appender>
 
-    <!-- الرووت يكتب في الكونسول فقط -->
+
     <root level="INFO">
         <appender-ref ref="Console" />
     </root>
 
-    <!-- الباكيج بتاعك يكتب في الملف فقط -->
+
     <logger name="com.example.EmployeeService.Aspects" level="DEBUG" additivity="false">
         <appender-ref ref="FileOnlyAspect" />
     </logger>
